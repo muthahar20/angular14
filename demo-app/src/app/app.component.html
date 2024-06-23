@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MuttuWebPage</title>
+ 
+</head>
+<body bgcolor="yellow">
+  <app-header></app-header>
+
+  <br><br>
+  <input type="text" #box />
+  <br><br> <br>
+  <button (click)="getVal(box.value)">Your Entered name is : {{ name }}</button>
+
+  <br><br><br>
+  <h2> Switch case in Angular</h2>
+ <br><br>
+ <input type="text" #colorVal/>
+ <br><br>
+ <button (click)="getColor(colorVal.value)">Your Entered color is : {{ colorR }}</button>
+<br><br><h2>ngFor example</h2>
+<table border="10">
+  <tr>
+    <td>Family</td>
+  </tr>
+  <tr *ngFor="let item of data">
+    <td>{{ item }}</td>
+  </tr>
+</table>
+
+<br><br><br><br><h2>Simple Form Eg:</h2>
+
+<form #loginForm="ngForm" (ngSubmit)="getValues(loginForm.value)">
+
+  <input type="text" name="userName" ngModel placeholder="Enter userName"/><br><br>
+  <input type="password" name="password" ngModel placeholder="Enter passowrd"/>
+  <br><br>
+  <button>Login</button>
+<br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br> <br><br>
+</form>
+
+
+
+</body>
+<app-footer></app-footer>
+</html>
